@@ -1,0 +1,14 @@
+接口文档说明:
+
+    1、index
+        (1)banner
+            src             图片路径
+        (2)main
+            src             图片路径
+            title           标题
+            read            阅读量
+            comment         评论量
+            fabulous        点赞量
+            portrait        头像
+            nickName        昵称
+            time            发布时间

@@ -1,0 +1,412 @@
+@import "../../common/reset.css";
+@import "//at.alicdn.com/t/font_1189361_2yxip0gkev2.css";
+
+body{
+    background: #f4f4f4;
+}
+/* header#header 网页头部 */
+#header{
+    width: 100%;
+    height: 56px;
+    background: #ffe300;
+}
+#header nav{
+    margin: 0 70px;
+    position: relative;
+}
+.logo{
+    position: absolute;
+    top: 18px;
+    left: 0;
+}
+#header nav ul{
+    width: 622px;
+    margin: 0 auto;
+}
+#header ul li{
+    float: left;
+    line-height: 56px;
+    position: relative;
+}
+#header ul>li:nth-of-type(1),#header ul>li:nth-of-type(8){
+    font-weight: 900;
+}
+#header ul>li>a{
+    padding: 0 23px;
+}
+#header ul li div{
+    position: absolute;
+    top: 56px;
+    z-index: 2;
+    left: 0;
+    width: 664px;
+    background: #FFF;
+    box-shadow: 0 1px 12px 0 rgba(0,0,0,.2);
+    border-radius: 0 0 4px 4px;
+    display: none;
+}
+#header ul li div.menu{
+    width: 152px;
+    padding-top: 6px;
+}
+#header ul>li:nth-of-type(8) .menu{
+    font-weight: 100;
+}
+.menu p{
+    padding-left: 20px;
+}
+#header ol{
+    padding: 11px 17px 17px;
+    border-bottom: 1px solid #eaeaea;
+}
+#header ol li{
+    width: 90px;
+    height: 28px;
+    line-height: 28px;
+    margin-top: 4px;
+    text-align: center;
+    position: relative;
+}
+#header ol li a{
+    display: block;
+    padding: 0 7px;
+    margin: 0 6px;
+    border-radius: 4px;
+}
+#header ol li span{
+    display: block;
+    width: 1px;
+    height: 14px;
+    background: #DDD;
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+#header aside{
+    padding: 0 30px;
+}
+#header aside p{
+    float: left;
+    margin-right: 40px;
+}
+#header p a{
+    padding-right: 15px;
+}
+.personalCenter{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 56px;
+    line-height: 56px;
+}
+.personalCenter i{
+    padding: 0 16px;
+    font-size: 20px;
+}
+.personalCenter em{
+    width: 1px;
+    height: 10px;
+    background: #444444;
+    margin-top: 23px;
+    margin-left: 20px;
+}
+.personalCenter a{
+    float: left;
+    margin-left: 20px;
+}
+
+/* section#section 网页优势区域 */
+#section{
+    width: 100%;
+    background: #ffffff;
+}
+.section{
+    width: 1130px;
+    margin: 0 auto;
+}
+.banner{
+    padding: 20px 0;
+    height: 286px;
+    overflow: hidden;
+    position: relative;
+}
+.banner ul{
+    width: 800%;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+}
+.banner li{
+    float: left;
+}
+.banner a{
+    display: block;
+}
+.banner img{
+    width: 1130px;
+    height: 286px;
+}
+.advantage{    
+    padding-bottom: 55px;
+}
+.advantage li{
+    float: left;
+    margin-right: 20px;
+}
+.advantage li:nth-of-type(5){
+    margin-right: 0;
+}
+.advantage img{
+    width: 210px;
+}
+
+/* main#main 网页主体区域 */
+#main{
+    width: 100%;
+    font-size: 16px;
+}
+.mainNav{
+    height: 56px;
+    width: 100%;
+    z-index: 10;
+    box-sizing: border-box;
+    line-height: 54px;
+    background: #ffffff;
+}
+.mainNav ul{
+    width: 372px;
+    margin: 0 auto;
+}
+.mainNav li{
+    float: left;
+    padding: 0 30px;
+}
+.mainNav li a{
+    display: block;
+    box-sizing: border-box;
+}
+.mainNav li:nth-of-type(1) a{
+    border-bottom: 2px solid #444;
+}
+.cardList{
+    width: 1130px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.cardBox{
+    background: #fff;
+    margin: 0 20px 20px 0;
+    float: left;
+    width: 210px;
+    border-radius: 4px;
+}
+.cardBox:nth-of-type(5n){
+    margin-right: 0;
+}
+.cardImg{
+    border-radius: 4px 4px 0 0;
+    width: 210px;
+}
+.cardImg img{
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+}
+.cardInfo{
+    padding: 11px 16px 13px;
+    border-bottom: 1px solid #eeeeee;
+    height: 75px;position: relative;
+}
+.cardInfo-title{
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    margin-bottom: 1px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cardInfo-type{
+    font-size: 12px;
+    color: #BBB;
+    margin-bottom: 17px;
+    line-height: 18px;
+}
+.cardInfo-item{
+    position: absolute;
+    bottom: 14px;
+}
+.cardInfo-item .iconfont{
+    font-size: 12px;
+    color: #BBB;
+    margin-right: 10px;
+}
+.cardInfo-item span{
+    margin-left: 5px;
+}
+.cardItem{
+    padding: 0 16px;
+    font-size: 12px;
+    height: 50px;
+    line-height: 50px;
+}
+.cardItem a{
+    width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cardItem a img{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.time{
+    color: #BBB;
+}
+.flip{
+    margin-top: 40px;
+    text-align: center;
+}
+.flip a,.flip span{
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    border-radius: 4px;
+    color: #999;
+    background: #FFF;
+    margin: 0 3px;
+    text-align: center;
+    border: 1px solid #e9e9e9;
+    line-height: 40px;
+}
+.flip a.flipActive{
+    background: #ffe300;
+}
+/* div#chatArt 聊哉艺术 */
+#chatArt{
+    width: 1130px;
+    height: 100px;
+    margin: 30px auto 0;
+}
+#chatArt img{
+    width: 100%;
+    height: 100%;
+}
+
+/* div#guessLike 猜你喜欢 */
+#guessLike{
+    width: 1130px;
+    margin: 0 auto;
+}
+#guessLike p{
+    margin: 20px 0;
+    color: #666666;
+}
+#guessLike span{
+    color: #d36f16;
+}
+.likeNav{
+    margin-bottom: 50px;
+}
+.likeNav dl{
+    width: 210px;
+    margin-right: 20px;
+    background: #FFF;
+    border-radius: 4px;
+    float: left;
+}
+.likeNav dl:nth-of-type(5){
+    margin-right: 0;
+}
+.likeNav img{
+    width: 100%;
+}
+.likeNav dd{
+    padding: 12px 16px;
+}
+.likeNav dd a{
+    float: left;
+    width: 164px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.likeNav dd i{
+    font-size: 14px;
+    color: #F00;
+}
+/* footer#footer 页面底部 */
+#footer{
+    width: 100%;
+    background: #282828;
+    color: #666666;
+}
+#footer a{
+    color: #666666;
+}
+.footer{
+    width: 1130px;
+    margin: 0 auto;
+    height: 200px;
+}
+.footerNav-top{
+    height: 130px;
+    line-height: 130px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333333;
+}
+.footerNav-top li{
+    float: left;
+    margin-right: 38px;
+    position: relative;
+}
+.footerNav-top li a{
+    display: block;
+}
+.footerNav-top i{
+    font-size: 26px;
+    line-height: 120px;
+    position: relative;
+    top: 5px;
+}
+.footerNav-top span{
+    font-size: 14px;
+    float: right;
+}
+.footerNav-top p i{
+    margin-left: 40px;
+}
+.footerNav-bottom{
+    font-size: 12px;
+    line-height: 22px;
+}
+.footerNav-bottom i{
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background: #666666;
+    vertical-align: middle;
+    margin: 0 19px;
+}
+.police{
+    padding-left: 20px;
+    background: url(../../../img/icon-police.png) no-repeat;
+}
+/* 回到顶部 */
+#backTop{
+    width: 50px;
+    height: 50px;
+    background: #DDD;
+    color: #FFF;
+    position: fixed;
+    border-radius: 4px;
+    bottom: 34px;
+    left: 50%;
+    margin-left: 575px;
+    text-align: center;
+    line-height: 50px;
+    display: none;
+}
+#backTop i{
+    font-size: 30px;
+}
