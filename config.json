@@ -1,5 +1,5 @@
 {
-    "js" : ["./src/js/pages/index/index.js"],
+    "js" : ["./src/js/pages/index/index.js","./src/js/pages/login/login.js"],
     "css" : ["./src/css/pages/index/index.less","./src/css/pages/login/login.less"],
     "json" : ["./src/json/zCool.json"]
 }

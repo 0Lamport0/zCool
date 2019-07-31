@@ -126,9 +126,37 @@ function getAjax() {
 /* 主体区域数据获取 */
 function getMainCardBox(data){
     let mainData = data.index.main;
-    $.each(mainData,function(index,item){
-        $(".cardList").append('<div class="cardBox"><div class="cardImg"><img src="' + item.src + '" title="" alt="" /></div><div class="cardInfo"><p class="cardInfo-title"><a href="###">'+item.title+'</a></p><p class="cardInfo-type">'+item.classification+'</p><p class="cardInfo-item"><i class="iconfont icon-yanjing"><span>'+item.read+'</span></i><i class="iconfont icon-pinglun"><span>'+item.comment+'</span></i><i class="iconfont icon-dianzan"><span>'+item.fabulous+'</span></i></p></div><div class="cardItem clearFloat"><a href="###" class="left"><img src="'+item.portrait+'" title="" alt="" />'+item.nickName+'</a><span class="right time">'+item.time+'</span></div></div>')
-    })
+    
+    // $.each(mainData,function(index,item){
+    //     $(".cardList").append('<div class="cardBox"><div class="cardImg"><img src="' + item.src + '" title="" alt="" /></div><div class="cardInfo"><p class="cardInfo-title"><a href="###">'+item.title+'</a></p><p class="cardInfo-type">'+item.classification+'</p><p class="cardInfo-item"><i class="iconfont icon-yanjing"><span>'+item.read+'</span></i><i class="iconfont icon-pinglun"><span>'+item.comment+'</span></i><i class="iconfont icon-dianzan"><span>'+item.fabulous+'</span></i></p></div><div class="cardItem clearFloat"><a href="###" class="left"><img src="'+item.portrait+'" title="" alt="" />'+item.nickName+'</a><span class="right time">'+item.time+'</span></div></div>')
+    // })
+    for( let i = 0;i < 10;i ++ ){
+        $(".cardList")[0].innerHTML += '<div class="cardBox"><div class="cardImg"><img src="' + mainData[i].src + '" title="" alt="" /></div><div class="cardInfo"><p class="cardInfo-title"><a href="###">'+mainData[i].title+'</a></p><p class="cardInfo-type">'+mainData[i].classification+'</p><p class="cardInfo-item"><i class="iconfont icon-yanjing"><span>'+mainData[i].read+'</span></i><i class="iconfont icon-pinglun"><span>'+mainData[i].comment+'</span></i><i class="iconfont icon-dianzan"><span>'+mainData[i].fabulous+'</span></i></p></div><div class="cardItem clearFloat"><a href="###" class="left"><img src="'+mainData[i].portrait+'" title="" alt="" />'+mainData[i].nickName+'</a><span class="right time">'+mainData[i].time+'</span></div></div>'
+    }
+    $("#myPage").sPage({
+        page:1,//当前页码，必填
+        total:mainData.length,//数据总条数，必填
+        pageSize:10,//每页显示多少条数据，默认10条
+        showTotal:true,//是否显示总条数，默认关闭：false
+        totalTxt:"共{total}条",//数据总条数文字描述，{total}为占位符，默认"共{total}条"
+        noData: false,//没有数据时是否显示分页，默认false不显示，true显示第一页
+        showSkip:true,//是否显示跳页，默认关闭：false
+        showPN:true,//是否显示上下翻页，默认开启：true
+        prevPage:"上一页",//上翻页文字描述，默认“上一页”
+        nextPage:"下一页",//下翻页文字描述，默认“下一页”
+        backFun:function(page){
+            //点击分页按钮回调函数，返回当前页码
+            // $("#pNum").text(page);
+            console.log(this.pageSize)
+            /**
+             * (page-1) * 10
+             */
+            $(".cardList")[0].innerHTML = "";
+            for( let i = (page-1) * 10;i < page * 10;i ++ ){
+                $(".cardList")[0].innerHTML += '<div class="cardBox"><div class="cardImg"><img src="' + mainData[i].src + '" title="" alt="" /></div><div class="cardInfo"><p class="cardInfo-title"><a href="###">'+mainData[i].title+'</a></p><p class="cardInfo-type">'+mainData[i].classification+'</p><p class="cardInfo-item"><i class="iconfont icon-yanjing"><span>'+mainData[i].read+'</span></i><i class="iconfont icon-pinglun"><span>'+mainData[i].comment+'</span></i><i class="iconfont icon-dianzan"><span>'+mainData[i].fabulous+'</span></i></p></div><div class="cardItem clearFloat"><a href="###" class="left"><img src="'+mainData[i].portrait+'" title="" alt="" />'+mainData[i].nickName+'</a><span class="right time">'+mainData[i].time+'</span></div></div>'
+            }
+        }
+    });
     mailCardBox(); 
 }
 
