@@ -19,6 +19,6 @@
     "mustache-loader": "^1.4.3",
     "vinyl-named": "^1.1.0",
     "webpack": "3",
-    "webpack-stream": "3"
+    "webpack-stream": "7"
   }
 }
